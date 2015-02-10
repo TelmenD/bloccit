@@ -29,4 +29,6 @@ Please feel free to use a different markup language if you do not plan to run
 
 ## Bloccit: a Reddit clone to teach the fundamentals of web development and Rails 4.
 
+You can try it on [telmen-bloccit](https://telmen-bloccit.herokuapp.com/)
+
 Made with my mentor at [Bloc](http://bloc.io).
