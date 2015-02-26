@@ -13,6 +13,8 @@ group :development do
   gem 'sqlite3'
 end
 
+gem'devise'
+
 gem 'faker'
 
 gem 'bootstrap-sass'
