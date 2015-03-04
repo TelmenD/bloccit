@@ -14,6 +14,9 @@ group :development do
 end
 
 gem 'figaro', '~> 1.0.0' 
+
+gem'pundit'
+
 gem'devise'
 
 gem 'faker'
