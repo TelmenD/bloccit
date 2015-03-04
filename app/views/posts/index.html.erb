@@ -2,16 +2,18 @@
 <% if policy(Post.new).create? %>
   <%= link_to "New Post", new_post_path, class:'btnbtn-success' %>
 <% end %>
-<% @posts.each do |post| %>
-  <div class="media">
-     <div class="media-body">
-       <h4 class="media-heading">
-         <%= link_to post.title, post %>
-       </h4>
-       <small>
-          submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %><br/> 
-          <%= post.comments.count %> Comments
-        </small>
+<% if @posts != nil%>
+  <% @posts.each do |post| %>
+    <div class="media">
+       <div class="media-body">
+         <h4 class="media-heading">
+           <%= link_to post.title, post %>
+         </h4>
+         <small>
+            submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %><br/> 
+            <%= post.comments.count %> Comments
+          </small>
+       </div>
      </div>
-   </div>
+  <% end %>
 <% end %>
