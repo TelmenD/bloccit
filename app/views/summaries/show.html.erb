@@ -1,0 +1,9 @@
+<h1><%=  "This is Summary"%></h1>
+
+<div class="row">
+  <% @summary.each do |sum| %>
+  <div class="col-md-8">
+    <p><%= sum.description %></p>
+  </div>
+  <% end %>
+</div>

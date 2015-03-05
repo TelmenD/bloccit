@@ -8,5 +8,8 @@
     <% if policy(@post).edit? %>
       <%= link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn btn-success' %>
     <% end %>
+    <h4 class="media-heading">
+           <%= link_to "summary", [@topic, @post, @post.summary] %>
+    </h4>
   </div>
 </div>

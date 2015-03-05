@@ -40,6 +40,14 @@ posts = Post.all
   )
 end
 
+# Create Summaries
+posts.each do |post|
+  Summary.create!(
+    description: post.body[0..15],
+    post: post
+  )
+end
+
 admin = User.new(
  name:     'Admin User',
  email:    'admin@example.com',
@@ -71,3 +79,4 @@ member.save!
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+puts "#{Summary.count} summeries created"
